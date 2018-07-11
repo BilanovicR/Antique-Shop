@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrujte se</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/osnova.css">
+<script  type="text/javascript" src="../js/funkcije.js"></script>
+<script  type="text/javascript" src="../js/registracija.js"></script>
+
+</head>
+<body onload="sacuvajKorisnike(), dobroDosli()">
+<div id="okvir">
+
+<div id="zaglavlje">
+<span id="login">
+			<form id="logovanje">
+			Ulogujte se:<br>
+			Username:<input type="text" name="username" required="required" id="logIme"><br>
+			Password:<input type="password" name="password" required="required" id="logPass"><br>
+			<input type="submit" name="submit" value="Prijavi se" onclick="prijaviSe()"><br>
+			<a href="Registracija.html">Još niste registrovani?</a>
+			</form>
+			<div id="logOut">
+				<p id="pozdrav"></p>
+				<button value="Log Out" onclick="izlogujSe()">Izlogujte se</button>
+			</div>
+</span>
+
+<div id="naslov">
+<strong>Antikvarnica</strong>
+</div>
+
+<div id="navigacija">
+	<nav>
+	<ul>
+		<il><a href="Pocetna.html">Početna</a></il>
+		<il><a href="Kategorije.html">Kategorije</a></il>
+		<il><a href="Moj profil.html">Moj profil</a></il>
+		<il><a href="Postavi oglas.html">Postavi oglas</a></il>
+	</ul>
+	</nav>
+</div>
+<hr>
+
+</div>
+
+<h2>Molimo Vas da unesete Vaše podatke:</h2>
+<hr>
+<form class="profil" id="profil" name="profil">
+	<fieldset>
+	Postavi profilnu sliku:<input type="file" id="profilna" required="required" name="profilna" accept="image/*"><br>
+	Ime: <input type="text" name="ime" id="ime" required="required"><br>
+	Prezime: <input type="text" name="prezime" id="prezime" required="required"><br>
+	Pol:<br><input type="radio" name="pol" class="pol" required="required" value="Muški">Muški<br>
+			<input type="radio" name="pol" class="pol" value="Ženski">Ženski<br>
+	Datum rođenja:<br><input type="date" id="datumrodj" name="datum_rodjenja" required="required">	
+	Adresa:<br>
+		Ulica <input type="text" id="ulica" name="ulica" required="required"><br>
+		Broj <input type="number" id="broj" name="broj" required="required"><br>
+		Mesto <input type="text" id="mesto" name="mesto" required="required"><br>
+		Postanski broj <input type="number" id="postbroj" name="postbroj" maxlength="5" required="required"><br>
+		Email <input type="email" id="email" name="email" required="required"><br>
+		Telefon <input type="number" id="telefon" name="telefon" required="required"><br><br>
+		Korisnicko ime (username): <input type="text" id="username" name="username" required="required"><br>
+		Šifra (password): <input type="password" id="sifra" class="password" name="password" required="required"><br>
+		Ponovite šifru: <input type="password" id="sifra2" class="password" name="password" required="required"><br>
+
+	</fieldset><br>
+	
+	<button type="submit" name="submit" onclick="registrujSe()" value="Registruj se">Registruj se</button><br><br>
+	<input type="reset" value="Resetuj" name="resetuj">
+</form>
+<div id="footer">
+	<p>Projekat iz Webdizajna<br>
+	Bilanović Ružica</p>
+</div>
+
+</div>
+</body>
+</html>

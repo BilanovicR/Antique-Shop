@@ -1,0 +1,66 @@
+#zaglavlje {
+	background-color: maroon;
+	width: 100%;
+	}
+
+#login {
+	float: right;
+	width: 50%;
+	color: beige;
+	text-align: right;
+	}
+		#login a{
+			color: beige;
+			}
+
+#naslov {
+	font-size: 52px;
+	color: beige;
+	font-weight: bolder;
+	margin-top: 0;
+	}
+
+#navigacija {
+	display: inline-block;
+	list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: left;
+    }
+
+		#navigacija ul{
+			padding-left: 0;
+		}
+
+		#navigacija a {
+			font-size: 26px;
+			width: 50%;
+			color: beige;
+			padding-right: 10px;
+			text-align: left;
+			}
+
+		#navigacija	a:hover{
+			color: maroon;
+			background-color: beige;
+			}
+
+#pretraga {
+	color: beige;
+}
+
+body {
+	background-color: beige;
+	font-family: Papyrus;
+	background-size: 100%;
+    background-attachment: fixed;
+	}
+
+#footer p {
+	align-self: baseline;
+	margin-bottom: 0px;
+	background-color: maroon;
+	color: beige;
+	text-align: center;
+}

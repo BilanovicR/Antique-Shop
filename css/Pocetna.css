@@ -1,0 +1,15 @@
+.oglas{
+	background-color: beige;
+	border-style: none;
+	display: inline-block;
+	}
+
+.naziv{
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.cena{
+	font-size: 20px;
+	font-weight: bolder;
+}

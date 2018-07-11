@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moj profil</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/osnova.css">
+<script  type="text/javascript" src="../js/mojprofil.js"></script>
+<script  type="text/javascript" src="../js/funkcije.js"></script>
+</head>
+<body onload="loadProfil(), dobroDosli()">
+<div id="okvir">
+<div id="zaglavlje">
+<span id="login">
+			<form id="logovanje">
+			Ulogujte se:<br>
+			Username:<input type="text" name="username" required="required" id="logIme"><br>
+			Password:<input type="password" name="password" required="required" id="logPass"><br>
+			<input type="submit" name="submit" value="Prijavi se" onclick="prijaviSe()"><br>
+			<a href="Registracija.html">Još niste registrovani?</a>
+			</form>
+			<div id="logOut">
+				<p id="pozdrav"></p>
+				<button value="Log Out" onclick="izlogujSe()">Izlogujte se</button>
+			</div>
+</span>
+
+<div id="naslov">
+<strong>Antikvarnica</strong>
+</div>
+
+<div id="navigacija">
+	<nav>
+	<ul>
+		<il><a href="Pocetna.html">Početna</a></il>
+		<il><a href="Kategorije.html">Kategorije</a></il>
+		<il><a href="Moj profil.html">Moj profil</a></il>
+		<il><a href="Postavi oglas.html">Postavi oglas</a></il>
+	</ul>
+	</nav>
+</div>
+<hr>
+</div>
+
+<h2>Vaš profil</h2>
+<hr>
+<form class="profil" id="profil" name="profil">
+
+	Postavi novu profilnu sliku <input type="file" id="profilna" name="profilna" accept="image/*" required="required"><br>
+	<img id="prikazSlike"></img>
+	<fieldset>
+	<legend>Lični podaci</legend>
+	Ime: <input type="text" name="ime" required="required" id="ime"><br>
+	Prezime: <input type="text" name="prezime" required="required" id="prezime"><br>
+	Pol:<br>
+		<input type="radio" name="pol" value="Muški" id="Muški" required="required" class="pol">Muški<br>
+		<input type="radio" name="pol" value="Ženski" id="Ženski" class="pol">Ženski<br>
+	Datum rođenja:<br>
+		<input type="date" name="datum_rodjenja" id="datumrodj" required="required">
+	</fieldset>
+	
+	<fieldset>
+		<legend>Kontakt podaci</legend>
+				Adresa:<br>
+				Ulica <input type="text" name="adresa" required="required" id="ulica"><br>
+				Broj <input type="number" name="broj" required="required" id="broj"><br>
+				Mesto <input type="text" name="mesto" required="required" id="mesto"><br>
+				Postanski broj <input type="number" name="postanskibroj" maxlength="5" required="required" id="postbroj"><br>
+				Email <input type="email" name="email" required="required" id="email"><br>
+				Telefon <input type="number" name="telefon" id="telefon" required="required"><br>
+	</fieldset><br>
+	
+	<fieldset>
+		<legend>Izaberite Vaše korisničko ime i šifru</legend>
+		Korisnicko ime (username): <input type="text" name="username" required="required" id="username"><br>
+		Šifra (password): <input type="password" name="password" required="required" id="sifra">
+	</fieldset><br>
+	<input type="submit" value="Izmeni" name="Izmeni" onclick="izmeniProfil()"><br>
+	<br>
+	<input type="reset" value="Resetuj" name="resetuj">
+</form>
+<div id="footer">
+	<p>Projekat iz Webdizajna<br>
+	Bilanović Ružica</p>
+</div>
+
+</div>
+</body>
+</html>

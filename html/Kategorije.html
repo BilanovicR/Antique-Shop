@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pretražite oglase po kategorijama</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/Pocetna.css">
+<link rel="stylesheet" type="text/css" href="../css/osnova.css">
+<script  type="text/javascript" src="../js/kategorije.js"></script>
+</head>
+<body onload="dobroDosli()">
+<div id="okvir">
+<div id="zaglavlje">
+<span id="login">
+			<form id="logovanje">
+			Ulogujte se:<br>
+			Username:<input type="text" name="username" required="required" id="logIme"><br>
+			Password:<input type="password" name="password" required="required" id="logPass"><br>
+			<input type="submit" name="submit" value="Prijavi se" onclick="prijaviSe()"><br>
+			<a href="Registracija.html">Još niste registrovani?</a>
+			</form>
+			<div id="logOut">
+				<p id="pozdrav"></p>
+				<button value="Log Out" onclick="izlogujSe()">Izlogujte se</button>
+			</div>
+</span>
+
+<div id="naslov">
+<strong>Antikvarnica</strong>
+</div>
+
+<div id="navigacija">
+	<nav>
+	<ul>
+		<il><a href="Pocetna.html">Početna</a></il>
+		<il><a href="Kategorije.html">Kategorije</a></il>
+		<il><a href="Moj profil.html">Moj profil</a></il>
+		<il><a href="Postavi oglas.html">Postavi oglas</a></il>
+	</ul>
+	</nav>
+</div>
+<hr>
+<div id="pretraga">
+	Brza pretraga
+	<input type="search" id="pretrazi" name="Pretraga">
+	<button id="dugme" onclick="pretraga()">Pretraži</button>
+</div>
+<hr>
+</div>
+
+<h2>Izaberite kategoriju</h2>
+
+<div id="kategorije">
+
+	<button onclick='prikazOglasa("namestaj")'>Nameštaj</button>
+
+	<button onclick="prikazOglasa('nakit')">Nakit</button>
+
+	<button onclick="prikazOglasa('knjige')">Knjige</button>
+
+	<button onclick="prikazOglasa('satovi')">Satovi</button>
+
+	<button onclick="prikazOglasa('razno')">Razno</button>
+
+</div>
+<div id="oglasiKategorije"></div>
+
+<div id="footer">
+	<p>Projekat iz Webdizajna<br>
+	Bilanović Ružica</p>
+</div>
+</div>
+
+
+</body>
+</html>

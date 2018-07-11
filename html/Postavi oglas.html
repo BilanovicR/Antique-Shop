@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postavite oglas</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/osnova.css">
+<script src="../js/postaviOglas.js"></script>
+<script  type="text/javascript" src="../js/funkcije.js"></script>
+</head>
+<body onload="dobroDosli(), provera()">
+<div id="okvir">
+
+<div id="zaglavlje">
+<span id="login">
+			<form id="logovanje">
+			Ulogujte se:<br>
+			Username:<input type="text" name="username" required="required" id="logIme"><br>
+			Password:<input type="password" name="password" required="required" id="logPass"><br>
+			<input type="submit" name="submit" value="Prijavi se" onclick="prijaviSe()"><br>
+			<a href="Registracija.html">Još niste registrovani?</a>
+			</form>
+			<div id="logOut">
+				<p id="pozdrav"></p>
+				<button value="Log Out" onclick="izlogujSe()">Izlogujte se</button>
+			</div>
+</span>
+
+<div id="naslov">
+<strong>Antikvarnica</strong>
+</div>
+
+<div id="navigacija">
+	<nav>
+	<ul>
+		<il><a href="Pocetna.html">Početna</a></il>
+		<il><a href="Kategorije.html">Kategorije</a></il>
+		<il><a href="Moj profil.html">Moj profil</a></il>
+		<il><a href="Postavi oglas.html">Postavi oglas</a></il>
+	</ul>
+	</nav>
+</div>
+<hr>
+</div>
+
+<h1>Postavite oglas</h1>
+
+<div id="novi_oglas" class="novi_oglas">
+
+<form class="oglas" name="oglas" id="oglas"><!--postavljeno je da su sva polja obavezujuća -->
+<fieldset>
+	<legend>Molimo Vas da unesete sledeće podatke:</legend>
+	Naziv: <input type="text" name="naziv" class="naziv" id="naziv" required="required"><br>
+	Opis: <textarea name="opis" class="opis" id="opis" required="required"></textarea><br>
+	Kategorija:<br>
+				<input type="radio" name="kategorija" class="kategorija" value="namestaj" required="required">Nameštaj<br>
+				<input type="radio" name="kategorija" class="kategorija" value="nakit">Nakit<br>
+				<input type="radio" name="kategorija" class="kategorija" value="knjige">Knjige<br>
+				<input type="radio" name="kategorija" class="kategorija" value="satovi">Satovi i časovnici<br>
+				<input type="radio" name="kategorija" class="kategorija" value="razno">Razno<br>
+	Cena: <input type="number" name="cena" class="cena" required="required" min="1"><br>
+	Stanje: <br>
+			<input type="radio" name="stanje" class="stanje" value="ocuvano" required="required">Očuvano<br>
+			<input type="radio" name="stanje" class="stanje" value="osteceno">Oštećeno<br>
+	
+	Količina: <input type="number" name="kolicina" id="kolicina" class="kolicina" required="required" min="0"><br>
+	<div id="dostava">Način dostave:<br>
+		<input type="radio" name="dostava" value="na adresu" class="dostava" required="required">Na adresu<br>
+		<input type="radio" name="dostava" value="licno" class="dostava">Lično pouzećem<br>
+	</div>
+	Postavite sliku: <input type="file" name="oglslika" id="oglslika" accept="image/*">
+</fieldset>	<br><br>
+	<input type="submit" name="submit" onclick="sacuvajOglas()" value="Posalji oglas">
+</form>
+</div>
+<div id="footer">
+	<p>Projekat iz Web dizajna<br>
+	Bilanović Ružica</p>
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sat</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/osnova.css">
+<script  type="text/javascript" src="../js/oglas.js"></script>
+</head>
+<body onload="dobroDosli(), otvoriOglas(id)">
+<div id="okvir">
+
+<div id="zaglavlje">
+<span id="login">
+			<form id="logovanje">
+			Ulogujte se:<br>
+			Username:<input type="text" name="username" required="required" id="logIme"><br>
+			Password:<input type="password" name="password" required="required" id="logPass"><br>
+			<input type="submit" name="submit" value="Prijavi se" onclick="prijaviSe()"><br>
+			<a href="Registracija.html">Još niste registrovani?</a>
+			</form>
+			<div id="logOut">
+				<p id="pozdrav"></p>
+				<button value="Log Out" onclick="izlogujSe()">Izlogujte se</button>
+			</div>
+</span>
+
+<div id="naslov">
+<strong>Antikvarnica</strong>
+</div>
+
+<div id="navigacija">
+	<nav>
+	<ul>
+		<il><a href="Pocetna.html">Početna</a></il>
+		<il><a href="Kategorije.html">Kategorije</a></il>
+		<il><a href="Moj profil.html">Moj profil</a></il>
+		<il><a href="Postavi oglas.html">Postavi oglas</a></il>
+	</ul>
+	</nav>
+</div>
+<hr>
+</div>
+
+<h2>Detaljan prikaz oglasa</h2>
+
+<ul id="oglas"; class="oglas"; style="list-style-type: disc"; >
+<li id="oglslika"></li>	
+	Naziv:
+		<li id="naziv"></li><br>
+	Opis:
+		<li id="opis"></li><br>
+	Kategorija:
+		<li id="kategorija"></li><br>
+	Cena:
+		<li id="cena"></li><br>
+	Stanje:
+		<li id="stanje"></li><br>
+	Količina:
+		<li id="kolicina"></li><br>
+	Datum objave:
+		<li id="datum"></li><br>
+	Način dostave:
+		<li id="dostava"></li><br>
+		<hr>
+</ul>
+	
+<form id="kupi" name="kupi"> <!--ova forma je fiksni deo na svakoj stranici nekog oglasa kako bi se izvršila direktna kupovina-->
+	<fieldset name="Kupovina"><legend>Kupovina</legend>
+		Količina:<input type="number" name="kolicina" required="required" id="kol"><br>
+		Način dostave:<br>
+			<input type="radio" name="dostava" class="dostava" value="na adresu" required="required">Na adresu<br>
+			<input type="radio" name="dostava" class="dostava" value="licno">Lično<br>
+		Način plaćanja:<br>
+		<input type="radio" name="placanje" value="pouzecem" required="">Pouzećem<br>
+		<input type="radio" name="placanje" value="online">Online<br>
+	<button name="submit" value="Ubaci u korpu" onclick="naruci()">Poruči</button>
+	</fieldset>
+</form>
+<div  id="footer">
+	<p>Projekat iz Webdizajna<br>
+	Bilanović Ružica</p>
+</div>
+
+</div>
+
+</body>
+</html>
